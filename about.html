@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>About Me</title>
+    <link rel="icon" href="my.png" type="image/png">
+    <style> p {
+        margin-left: 10px;
+        margin-right: 599px;
+
+    }</style>
+<script> 
+ function validateField() {
+            var fieldValue = document.getElementById("field").value;
+            
+            if (fieldValue !== "21") {
+                document.getElementById("error").innerHTML = "nope! give it another try.";
+            } else {
+                document.getElementById("error").innerHTML = "you did it";
+            }
+        }
+</script>
+    
+</head>
+<body>
+    
+    <script src="Js.js"></script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="hobby.html">HOBBIES</a></li>
+                <li><a href="Hometown.html">HOMETOWN</a></li>
+            </ul>
+        </nav>                    
+    </header>
+    <div>
+
+    <h2>About Me</h2>
+
+            <p>Hi there! I'm Magnani Fabiola Zaheza Ruzibiza, and this is my corner of the web. Explore and get to know more about me, my hobbies 
+                <a href="hobby.html">HOBBIES</a>
+                , and my hometown.  <a href="Hometown.html">my hometown</a>  </p>
+
+                <p> I was born in a family of 6,5 girls and one boy. Yes, only me!! 
+                    I studied my primary school and secondary school in RWANDA, my home country.</p>
+            
+                <p>Now I am currently in the United States where I am pursuing my bachelor's degree in computer science.
+                   me and my twin brother  study at Oklahoma christian university. </p>
+                   
+
+                   <img src="IMAGES/octwin.jpg" alt=""Width="250" height="280"></a>
+                   <img src="IMAGES/twinn.jpg" alt=""Width="250" height="280"></a>
+            <p><h3>How many years do you think that I have(20-25)?</h3></p>
+            <input type="text" id="field" placeholder="Enter a value">
+            <button type="button" onclick="validateField()">Submit</button>
+            <p id="error"></p>
+        </div>
+       
+
+</body>
+</html>

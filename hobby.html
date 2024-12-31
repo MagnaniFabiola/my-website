@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>My Hobby Page</title>
+    <link rel="icon" href="my.png" type="image/png">
+    
+    <style>
+        #div1 {
+            width: 250px;
+            height: 280px;
+            padding: 10px;
+            border: 5px dashed #350a2d; 
+            margin-top: 20px;
+        }
+    </style>
+    
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var draggableElement = document.getElementById(data);
+            ev.target.appendChild(draggableElement);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="hobby.html">HOBBIES</a></li>
+                <li><a href="Hometown.html">HOMETOWN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <p><h2>Here are some of my favorite hobbies:</h2></p>
+        <ol>
+            <li>Hiking</li>
+            <li>Singing</li>
+            <li>Reading novels</li>
+            <li>Eating &#128512;</li>
+        </ol>
+        <img id="drag1" src="IMAGES/mme.jpg" draggable="true" ondragstart="drag(event)" width="250" height="280">
+        
+        <p>Singing has changed my life in a way that has deeply shaped my path and left a lasting mark on my personal development.
+            I had a means of expressing myself that went beyond words the instant I realized the influence of my own voice.
+            but it has also given me more self-assurance and courage. It has given me an opportunity for exchanging experiences and introduced me to a community of like-minded music lovers.
+            Maybe you can try singing it doesn't require you to have the best voice as you may think.Singing has many benefits I was inspired.
+            <h3 style="text-align: left;">click to read more. <a href="https://www.singupfoundation.org/singing-health?gad_source=1&gclid=Cj0KCQiA-62tBhDSARIsAO7twba66Oh9DVTqaEaN5kw9QGpB6fxUYSkDP7MZ2BtrmTtcwzH3B4N4bIcaAgbpEALw_wcB">
+                <img src="IMAGES/singing.jpg" alt=""Width="10" height="20"></a></h3>
+        </p>
+        
+        <p><h2>Oops!! now you think that you know me &#128512;? I don't think that's the case, just;</h2></p>
+        <p><h5>Try these 3 questions then you will know me better</h5></p>
+        
+        <p id="myField">Tell me more about your hobbies.</p>
+        <button type="button" onclick="displayHobby()">Know me</button>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <p id="myNick">Do you have a nickname?</p>
+        <button type="button" onclick="displayNickName()">Know me</button>
+        <p id="myColor">What is your favorite color?</p>
+        <button type="button" onclick="displayColor()">Know me</button>
+    </div>
+
+    <script>
+        function displayHobby() {
+            document.getElementById("myField").innerHTML = "Eating and Eating. Seems like you wanna see me again <b>drag and drop</b> my previous pic.";
+        }
+        function displayNickName() {
+            document.getElementById("myNick").innerHTML = "My nickname is Maggie.";
+        }
+        function displayColor() {
+            document.getElementById("myColor").innerHTML = "My favorite color is pink, like a barbie girl.";
+        }
+    </script>
+</body>

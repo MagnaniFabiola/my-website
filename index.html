@@ -1,0 +1,66 @@
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>MAGNANI'S WEBSITE</title>
+        <link rel="icon" href="my.png" type="image/png">
+        
+                
+    </head>
+            <body>
+                <script src="Js.js"></script>
+
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="hobby.html">HOBBIES</a></li>
+                            <li><a href="Hometown.html">HOMETOWN</a></li>
+                        </ul>
+                    </nav>                    
+                </header>
+                <header>
+                    <h1 class="name"> Magnani Fabiola</h1>
+                </header>
+                <style>
+                    body {
+                            font-family: 'Optima', sans-serif;
+                            background-color: #f4f4f4;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        
+                        header {
+                            text-align: center;
+                            padding: 50px 0;
+                        }
+                        .name {
+                            font-size: 37px;
+                            font-weight: bold;
+                            color: white;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                            
+                            padding-top: 450;
+                            opacity: 0; /* Initially hidden */
+                            animation: fadeInName 5s ease forwards; /* Animation to fade in */
+                            animation-delay: 1s; /* Delay before the animation starts */
+
+                        }
+
+                        @keyframes fadeInName {
+                            0% {
+                                opacity: 0;
+                            }
+                            100% {
+                                opacity: 1;
+                            }
+                        }
+                </style>
+                <div id="container">
+                    <div id="animate"></div>
+            </body>
+ </html>
+
+
+                
